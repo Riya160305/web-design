@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <input id="a1" type="number">
+    <button onclick="table()">click me</button>
+    <script>
+        function table(){
+            var a=document.getElementById("a1").value;
+            for(var i=1;i<=10;i++){
+                document.write(a*i);
+            }
+        }
+    </script>
+</body>
+</html>
