@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <input id="a1" type="text">
+    <input id="a2" type="text">
+    <input id="a3" type="text">
+    <button onclick="add()">click me</button>
+    <script>
+        function add(){
+            var a=document.getElementById("a1").value;
+            var b=document.getElementById("a2").value;
+            var c=document.getElementById("a3").value;
+            a=parseInt(a);
+            c=parseInt(c);
+            switch(b){
+                case "+":
+                    alert(a+c);
+                    break;
+                case "-":
+                    alert(a-c);
+                    break;
+                case "*":
+                    alert(a*c);
+                    break;
+                case "/":
+                    alert(a/c);
+                    break;
+                default:
+                    alert("value is not valid");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
