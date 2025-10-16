@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 20%;
+            height: 500px;
+            background-color: antiquewhite;
+            margin-top: 200px;
+            margin-left: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgb(110, 108, 108);
+        }
+        #display{
+            width: 100%;
+            height: 10%;
+        }
+        .cal{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            gap: 10px;
+            height: 70%;
+        }
+        .btn1{
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input id="display" type="text">
+        <div class="cal">
+            <button class="btn" onclick="app('7')">7</button>
+            <button class="btn" onclick="app('8')">8</button>
+            <button class="btn" onclick="app('9')">9</button>
+            <button class="btn" onclick="app('+')">+</button>
+            <button class="btn" onclick="app('4')">4</button>
+            <button class="btn" onclick="app('5')">5</button>
+            <button class="btn" onclick="app('6')">6</button>
+            <button class="btn" onclick="app('-')">-</button>
+            <button class="btn" onclick="app('1')">1</button>
+            <button class="btn" onclick="app('2')">2</button>
+            <button class="btn" onclick="app('3')">3</button>
+            <button class="btn" onclick="app('*')">*</button>
+            <button class="btn" onclick="app('0')">0</button>
+            <button class="btn" onclick="app('.')">.</button>
+            <button class="btn1" onclick="result()">=</button>
+            <button class="btn" onclick="app('%')">%</button>
+            <button class="btn" onclick="clear()">C</button>
+        </div>
+    </div>
+    <script>
+        const display=document.getElementById("display");
+        function app(value){
+            display.value+=value;
+        }
+        function clear(){
+            display.value="";
+        }
+        function result(){
+            display.value=eval(display.value);
+        }
+    </script>
+</body>
+</html>
