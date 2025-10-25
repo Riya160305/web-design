@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Carrom Board</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- Carrom Board Container --- */
+        .carrom-board-container {
+            width: 700px;
+            height: 700px;
+            background-color: #8B4513; /* Dark wood frame color */
+            border: 20px solid #5D4037; /* Thick outer frame */
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            position: relative;
+            padding: 50px; /* Space for the frame/inner playing area */
+            box-sizing: border-box;
+        }
+
+        /* --- Playing Surface --- */
+        .playing-surface {
+            width: 100%;
+            height: 100%;
+            background-color: #FFEBCC; /* Light, smooth surface color (light yellow/cream) */
+            border-radius: 5px;
+            position: relative;
+            /* Inner shadow to give a slight concave look */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- Corners and Pockets (The most defining features) --- */
+        .pocket {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #000;
+            border-radius: 50%;
+            z-index: 10; /* Ensures pockets are on top */
+            /* Positioning for the four corners */
+        }
+        .pocket.top-left { top: 10px; left: 10px; }
+        .pocket.top-right { top: 10px; right: 10px; }
+        .pocket.bottom-left { bottom: 10px; left: 10px; }
+        .pocket.bottom-right { bottom: 10px; right: 10px; }
+
+        /* --- Baselines / Striker Lines --- */
+        .baseline {
+            position: absolute;
+            width: 80%;
+            height: 5px;
+            background-color: #E60000; /* Red line color */
+            left: 10%;
+            /* Thin black border for realism */
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* Positioning the baselines */
+        .baseline.top { top: 80px; }
+        .baseline.bottom { bottom: 80px; }
+        .baseline.left {
+            transform: rotate(90deg);
+            top: calc(50% - 2.5px); /* Center vertically */
+            left: 45%;
+        }
+        .baseline.right {
+            transform: rotate(90deg);
+            top: calc(50% - 2.5px); /* Center vertically */
+            left: -25%;
+        }
+
+        /* --- Striking Circles (Outer and Inner) --- */
+        .striking-circle {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 5px solid #000; /* Black outer circle */
+            z-index: 5;
+        }
+
+        /* Positioning the striking circles near the baselines */
+        .striking-circle.top-left { top: 50px; left: 50px; }
+        .striking-circle.top-right { top: 50px; right: 50px; }
+        .striking-circle.bottom-left { bottom: 50px; left: 50px; }
+        .striking-circle.bottom-right { bottom: 50px; right: 50px; }
+
+        /* Inner circles - Red dot to show the no-play zone for the striker */
+        .striking-circle::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #E60000; /* Red dot */
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* --- Center Design (The main focal point) --- */
+        .center-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            border: 3px solid #000; /* Thin black circle */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Inner circle for the coin stack position */
+        .inner-center-circle {
+            width: 130px;
+            height: 130px;
+            background-color: #b93a3a; /* Dark blue/Royal Blue */
+            border: 5px solid #fff; /* White border */
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .star {
+             position: absolute;
+            top: 35%;
+            left: 40.5%;
+        }
+
+        /* --- Arrows/Directional Marks (optional but adds detail) --- */
+      
+    </style>
+</head>
+<body>
+    <div class="carrom-board-container">
+        <div class="playing-surface">
+            <div class="pocket top-left"></div>
+            <div class="pocket top-right"></div>
+            <div class="pocket bottom-left"></div>
+            <div class="pocket bottom-right"></div>
+
+            <div class="baseline top"></div>
+            <div class="baseline bottom"></div>
+            <div class="baseline left"></div>
+            <div class="baseline right"></div>
+
+            <div class="striking-circle top-left"></div>
+            <div class="striking-circle top-right"></div>
+            <div class="striking-circle bottom-left"></div>
+            <div class="striking-circle bottom-right"></div>
+
+            <div class="center-circle">
+                <div class="inner-center-circle"></div>  
+            </div>
+           <div class="star">
+                <span style="font-size: 120px;">&#10037;</span>
+            </div>
+    </div>
+</body>
+</html>
