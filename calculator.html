@@ -55,7 +55,7 @@
             <button class="btn" onclick="app('.')">.</button>
             <button class="btn1" onclick="result()">=</button>
             <button class="btn" onclick="app('%')">%</button>
-            <button class="btn" onclick="clear()">C</button>
+            <button class="btn" onclick="displayclear()">C</button>
         </div>
     </div>
     <script>
@@ -63,7 +63,7 @@
         function app(value){
             display.value+=value;
         }
-        function clear(){
+        function displayclear(){
             display.value="";
         }
         function result(){

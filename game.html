@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 500px;
+            height: 300px;
+            margin-top: 100px;
+            margin-left: 500px;
+            background-color: antiquewhite;
+            padding: 50px;
+            text-align: center;
+        }
+        input{
+            width: 60%;
+            height: 30px;
+            text-align: center;
+        }
+        button{
+            background-color: rgb(83, 83, 243);
+            color: black;
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100</p>
+        <input type="number" id="input" min="1" max="100"><br><br>
+        <button class="btn" id="btn">Guess</button>
+        <p class="message" id="message"></p>
+        <p id="attempts">Attempt:0</p>
+        <button id="resetbtn">Reset</button>
+    </div>
+    <script>
+        let number=Math.floor(Math.random()*100)+1;
+        let attempts=0;
+        const input=document.getElementById("input");
+        const btn=document.getElementById("btn");
+        const message=document.getElementById("message");
+        const attempttext=document.getElementById("attempts");
+        const resetbtn=document.getElementById("resetbtn");
+        btn.addEventListener("click", function()
+        {
+            const Guess=Number(input.value);
+            if(!Guess || Guess<1 || Guess>100){
+                message.textContent="Please enter a number between 1 and 100!";
+                return;
+            }
+            attempts++;
+            if(Guess===number){
+                message.textContent=`Correct!`;
+                btn.disabled=true;
+            }else if(Guess<number){
+                message.textContent="Number is low. Try again!";
+            }else{
+                message.textContent="Number is high. Try again!";
+            }
+            attempttext.textContent=`Attempts: ${attempts}`;
+            input.value="";
+            input.focus();
+        });
+        resetbtn.addEventListener("click", function() {
+            number = Math.floor(Math.random()*100)+1;
+            attempts = 0;
+            message.textContent = "";
+            attempt.textContent = "Attempts:0";
+            input.value = "";
+            btn.disabled = false;
+            input.focus();
+        });
+    </script>
+</body>
+</html>
