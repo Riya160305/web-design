@@ -1,0 +1,134 @@
+body{
+    background-color: black;
+}
+header {
+    width: 100%;
+    height: 60px;
+    margin-top: 0px;
+    float: right;
+}
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    float: left;
+}
+ul {
+    list-style-type: none;
+    text-align: right;
+    margin-right: 30px;
+    padding-top: 10px;
+}
+ul li {
+    display: inline;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 30px;
+}
+/*h1{
+    text-align: center;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}*/
+.about{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+}
+.image{
+    margin-left: 70px;
+    margin-top: 20px;
+    float: left;
+}
+.text h1{
+    text-align: center;
+}
+.text h3{ 
+    margin-top: 30px;
+    text-align: center;
+}
+.text p{
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.text button{
+    margin-left: 450px;
+    background-color: white;
+    color: black;
+}
+.text button:hover{
+    background-color: black;
+    color: white;
+}
+.menus{
+    height: 520px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu{
+    margin-top: 10px;
+    background-color: black;
+    display: flex;
+    color: black;
+    text-align: left;
+}
+.menu h1{
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+}
+.card{
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.Gallerys{
+    height: 650px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+.Gallerys h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.Gallery img{
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+footer{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+footer h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.con{
+    margin-top: 40px;
+    margin-left: 50px;
+    display: flex;
+}
+.con p{
+    margin-left: 300px;
+}
+.icon{
+    margin-left: 200px;
+}
