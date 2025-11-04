@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React JS Workshop</title>
+    <link rel="stylesheet" href="" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: #222;
+        }
+        /* Header */
+        
+        .header {
+            background-color: #111;
+            color: #fff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header .title {
+            font-size: 20px;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #f4b400;
+        }
+        /* Hero Section */
+        
+        .hero {
+            background: linear-gradient(90deg, lab(81.93% -19.47 -21.45), #bcd6e0);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .e { 
+            margin-right: 220px;
+            margin-left: 70px;
+            padding: 20px;
+        }
+        .r {
+             margin-left: 220px;
+            padding: 20px;
+        }
+        
+        .workshop-details p {
+            margin: 5px 0;
+        }
+        /* About Section */
+        
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        
+        .about h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        /* Agenda Section */
+        
+        .agenda {
+            background-color: #fef5e7;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .agenda h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        .agenda ol {
+            list-style-position: inside;
+            text-align: left;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 1.8;
+            list-style-type: none;
+        }
+        /* Speakers Section */
+        
+        .speakers {
+            background: linear-gradient(90deg, #98d6fa, #84c2f5);
+            padding: 50px 20px;
+            color: #000;
+            text-align: center;
+        }
+        
+        .speaker-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .speaker {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .speaker img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        /* Footer */
+        
+        .footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="title">React JS Workshop</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">Speakers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="e">
+            <img src="C:\Users\shrim\Downloads\download__1_-removebg-preview.png" alt="">
+        </div>
+        <div class="hero-content">
+            <h2>Empowering Students with Real-World Web Design Skills</h2>
+            <p>Join Dataplay | Hands-on Web Design Workshop at Shri Mahaveer College</p>
+
+            <div class="workshop-details">
+                <p><b>Date:</b> 15th October 2025</p>
+                <p><b>Time:</b> 10:00 AM - 12:00 PM</p>
+                <p><b>Venue:</b> Computer Science Department Auditorium</p>
+            </div>
+        </div>
+        <div class="r">
+            <img src="c:\Users\shrim\Downloads\download-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About the Workshop</h2>
+        <p>
+            This hands-on workshop aims to bridge the gap between theoretical knowledge and real-world web development practices. Students will learn how to structure web pages using HTML, style them with CSS, and gain insights into practical industry workflows.
+            The session will focus on applied learning and problem-solving in design and development.
+        </p>
+    </section>
+
+    <!-- Agenda Section -->
+    <section class="agenda">
+        <h2>Workshop Agenda</h2>
+        <ol>
+            <li>Introduction & Icebreakers – 10 mins</li>
+            <li>Understanding HTML Basics – 20 mins</li>
+            <li>Styling with CSS – 25 mins</li>
+            <li>Building Your First Web Page – 30 mins</li>
+            <li>Q&A and Career Guidance – 15 mins</li>
+        </ol>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers">
+        <h2>Speakers</h2>
+        <div class="speaker-list">
+            <div class="speaker">
+                <img src="https://via.placeholder.com/80" alt="Nishant Gupta">
+                <p><b>Nishant Gupta</b><br>Co-Founder @ Dataplay</p>
+            </div>
+            <div class="speaker">
+                <img src="https://via.placeholder.com/80" alt="Kushwant Singh">
+                <p><b>Kushwant Singh</b><br>Mentor @ Dataplay</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Dataplay | Shri Mahaveer College Workshop | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
